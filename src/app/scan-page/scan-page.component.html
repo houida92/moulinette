@@ -1,0 +1,54 @@
+<article class="scanner-container">
+    <header> Moulinette </header> 
+    <section *ngIf="isMailSelected" > 
+        <mat-card class='mail-container'>
+            <mat-card-subtitle> Envoyer le résultat par mail </mat-card-subtitle>
+            <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
+                <mat-form-field>
+                    <input matInput placeholder="à...">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="cc...">
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>Message</mat-label>
+                    <textarea matInput 
+                              cdkTextareaAutosize
+                              #autosize="cdkTextareaAutosize"
+                              cdkAutosizeMinRows="1"
+                              cdkAutosizeMaxRows="5"></textarea>
+                  </mat-form-field>
+                  
+        <button fxFlex class="sent-btn" mat-raised-button color="primary" >Envoyer </button>
+            </div>
+        
+        </mat-card>
+    </section>
+    <mat-card fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="20px" class="form-container">
+       
+        <button (click)="openDialog()" mat-fab color="accent" matTooltip ="Ajouter un site"> <mat-icon> add </mat-icon></button>
+        <mat-card class="sites">
+            <mat-list role="list" *ngFor="let site of sites">
+                <mat-list-item role="listitem" class="item-container">
+                     <mat-checkbox>{{site}}</mat-checkbox>
+                     <div class="icons-container"> 
+                         
+                            <button (click)="openDialog()" mat-icon-button  matTooltip ="Ajouter un site"> <mat-icon> edit </mat-icon></button>
+                            <button (click)="deleteItem(site)"  mat-icon-button color ="warn" matTooltip ="Supprimer un site"> <mat-icon> delete </mat-icon></button>
+
+                     </div>
+                    </mat-list-item>
+                    <mat-divider> </mat-divider>
+
+            </mat-list>
+        </mat-card>
+
+        <button fxFlex mat-raised-button color="primary" >Scanner </button>
+ 
+<div fxLayout="row" fxLayoutAlign = "space-around center " style="width: 100%;" fxLayoutGap="10px" >
+        <button  mat-fab color="primary" matTooltip ="Export"> <mat-icon> save_alt </mat-icon></button>
+        <button  mat-fab color="primary" matTooltip ="Envoyer par mail" (click)='sendMail()'> <mat-icon> mail_outline </mat-icon></button>
+
+</div>
+    </mat-card>
+</article>

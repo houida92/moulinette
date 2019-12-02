@@ -1,0 +1,84 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="20px" class="dialog">
+    <mat-card-subtitle> Configuration</mat-card-subtitle>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Identité
+                <mat-icon matTooltip="Description de l'élément" class="info-icon">info</mat-icon>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutAlign="space-around strech">
+            <mat-form-field>
+                <input matInput placeholder="Nom" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Adresse" />
+            </mat-form-field>
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Connexion
+                <mat-icon matTooltip="Description de l'élément" class="info-icon">info</mat-icon>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutAlign="space-around strech">
+            <mat-form-field>
+                <input matInput placeholder="Nom d'utilisateur" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Mot de passe" />
+            </mat-form-field>
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Paramètres de requête
+                <mat-icon matTooltip="Description de l'élément" class="info-icon">info</mat-icon>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutAlign="space-around strech">
+            <mat-form-field>
+                <input matInput placeholder="Famille" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Sous-famille" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="number" placeholder="Quantité par page" />
+            </mat-form-field>
+            <div>
+                <mat-form-field>
+                    <mat-label> de</mat-label>
+                    <input matInput type="number" placeholder="5" />
+                </mat-form-field>
+                <mat-form-field style="margin-left: 40px;">
+                    <mat-label> à</mat-label>
+                    <input matInput type="number" placeholder="100" />
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Séleteurs Css
+                <mat-icon matTooltip="Description de l'élément" class="info-icon">info</mat-icon>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutAlign="space-around strech">
+            <mat-form-field>
+                <input matInput placeholder="Référence produit" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Prix" />
+            </mat-form-field>
+        </div>
+    </mat-expansion-panel>
+    <footer fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+        <button mat-raised-button color="primary" matTooltip="OK">OK</button>
+        <button mat-raised-button color="warn" matTooltip="Cancel">Cancel</button>
+    </footer>
+</div>

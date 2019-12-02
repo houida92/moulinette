@@ -1,0 +1,62 @@
+
+.scanner-container {
+  
+    height: 100%;
+       text-align: center;
+       position: relative;
+       overflow: hidden;
+      background: linear-gradient(#3f51b5, #332452);
+  }
+  
+  header {
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 12vh;
+  letter-spacing: 3px;
+  color: white;
+  }
+  
+  footer {
+      display: block;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+  }
+  .form-container {
+    position: absolute;
+    transform: translate(-50% , -50%);
+    left: 50%;
+    top: 57%;
+    width: 350px;
+    text-align: center;
+    padding: 40px;
+}
+.sites {
+    height: 210px;
+    width: 250px;
+    overflow-y: scroll;
+}
+.item-container {
+    width: 100%;
+    position: relative;
+    .icons-container {
+        display: block;
+        position: absolute;
+        right: 2px;
+    }
+}
+.mail-container {
+    width: 30vw;
+    min-height: 349px;
+    position: absolute;
+    top: 36vh;
+    left: 5vw;
+}
+.sent-btn {
+    max-width: 97px;
+    position: absolute;
+    right: 31px;
+    bottom: 36px;
+}
